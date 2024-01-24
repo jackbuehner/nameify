@@ -21,7 +21,7 @@
 	<a href="https://agify.io/">agify.io</a>.
 </p>
 
-{#if form?.success}
+{#if form?.success && form.result}
 	<div class="result">
 		<p>The computer thinks you are {form.result.age} years old.</p>
 		<p>
@@ -37,6 +37,10 @@
 			{/each}
 		</ul>
 	</div>
+{/if}
+
+{#if form?.success === false}
+	<p>Something went wrong. Try another name.</p>
 {/if}
 
 <style>

@@ -29,6 +29,10 @@ export const actions = {
 			potentialNationalities: await nationalityResult
 		};
 
+		if (result.age === null) {
+			return { success: false };
+		}
+
 		return { success: true, result };
 	}
 } satisfies Actions;
