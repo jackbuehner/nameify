@@ -31,7 +31,7 @@
 		<p style="margin-bottom: 0;">
 			The computer has also guessed five possible nationalities for you based on your name:
 		</p>
-		<ul>
+		<ul style="margin-top: 0;">
 			{#each form.result.potentialNationalities as { country_id, probability }}
 				<li>{regionNames.of(country_id)} ({(probability * 100).toFixed(1)}% probable)</li>
 			{/each}
